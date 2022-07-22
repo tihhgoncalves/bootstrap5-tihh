@@ -1,0 +1,37 @@
+$breakpoints: '',
+    'sm',
+    'md',
+    'lg',
+    'xl',
+    'xll';
+
+
+@each $bpoint in $breakpoints {
+
+    @include for-media($bpoint) {
+
+        $risco: '';
+
+        @if $bpoint  !='' {
+            $risco : '-';
+        }
+
+        @for $base from 1 through 24 {
+
+            @for $i from 1 through $base {
+
+                .col-#{$bpoint}#{$risco}#{$i}-#{$base} {
+                    width: calc(100% / #{$base} * #{$i});
+                }
+
+                .offset-#{$bpoint}#{$risco}#{$i}-#{$base} {
+                    margin-left: calc(100% / #{$base} * #{$i});
+                }
+
+            }
+
+        }
+
+    }
+
+}

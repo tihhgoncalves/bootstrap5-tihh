@@ -1,0 +1,123 @@
+@mixin prepare_mep($bp) {
+
+    /** trata @media */
+    $screen: $screen-xs;
+
+    @if $bp =='sm' {
+        $screen: $screen-sm;
+    }
+
+    @if $bp =='md' {
+        $screen: $screen-md;
+    }
+
+    @if $bp =='lg' {
+        $screen: $screen-lg;
+    }
+
+    @if $bp =='xl' {
+        $screen: $screen-xl;
+    }
+
+    @if $bp =='xll' {
+        $screen: $screen-xll;
+    }
+
+    /** Trata momenclatura do class */
+    @if $bp =='' {
+        $bp : '';
+    }
+
+    @if $bp  !='' {
+        $bp : $bp + '-';
+    }
+
+    @media (min-width: #{$screen}) {
+
+        /** loops **/
+        @for $i from 1 through 15 {
+
+
+
+            /** MARGIN */
+            .margin-#{$bp}#{$i} {
+                margin: ($i * $space);
+            }
+
+            .margin-#{$bp}t#{$i} {
+                margin-top: ($i * $space);
+            }
+
+            .margin-#{$bp}y#{$i} {
+                margin-top: ($i * $space);
+                margin-bottom: ($i * $space);
+            }
+
+            .margin-#{$bp}x#{$i} {
+                margin-left: ($i * $space);
+                margin-right: ($i * $space);
+            }
+
+            .margin-#{$bp}t#{$i} {
+                margin-top: ($i * $space);
+            }
+
+            .margin-#{$bp}b#{$i} {
+                margin-bottom: ($i * $space);
+            }
+
+            .margin-#{$bp}l#{$i} {
+                margin-left: ($i * $space);
+            }
+
+            .margin-#{$bp}r#{$i} {
+                margin-right: ($i * $space);
+            }
+
+            /** PADDING */
+
+            .padding-#{$bp}#{$i} {
+                padding: ($i * $space);
+            }
+
+            .padding-#{$bp}t#{$i} {
+                padding-top: ($i * $space);
+            }
+
+            .padding-#{$bp}y#{$i} {
+                padding-top: ($i * $space);
+                padding-bottom: ($i * $space);
+            }
+
+            .padding-#{$bp}x#{$i} {
+                padding-left: ($i * $space);
+                padding-right: ($i * $space);
+            }
+
+            .padding-#{$bp}t#{$i} {
+                padding-top: ($i * $space);
+            }
+
+            .padding-#{$bp}b#{$i} {
+                padding-bottom: ($i * $space);
+            }
+
+            .padding-#{$bp}l#{$i} {
+                padding-left: ($i * $space);
+            }
+
+            .padding-#{$bp}r#{$i} {
+                padding-right: ($i * $space);
+            }
+        }
+
+    }
+}
+
+
+@include prepare_mep('');
+@include prepare_mep('sm');
+@include prepare_mep('md');
+@include prepare_mep('lg');
+@include prepare_mep('xl');
+@include prepare_mep('xxl');

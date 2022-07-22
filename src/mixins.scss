@@ -1,0 +1,37 @@
+@mixin for-media($breakpoint) {
+
+    $screen: $screen-xs;
+
+    @if $breakpoint =='sm' {
+        $screen: $screen-sm;
+    }
+
+    @if $breakpoint =='md' {
+        $screen: $screen-md;
+    }
+
+    @if $breakpoint =='lg' {
+        $screen: $screen-lg;
+    }
+
+    @if $breakpoint =='xl' {
+        $screen: $screen-xl;
+    }
+
+    @if $breakpoint =='xll' {
+        $screen: $screen-xll;
+    }
+
+
+    @media (min-width: #{$screen}) {
+        @content;
+    }
+
+}
+
+@mixin for-xs {
+    @include for-media('xs') {
+        @content;
+    }
+
+}
