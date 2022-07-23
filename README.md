@@ -22,6 +22,30 @@ E ele respeita os breaskpoints tmb, além dos espaços dos offsets. Veja o exemp
 </div>
 ```
 
+## Margins e Paddings
+Sim, o Bootstrap já tem esse recurso, mas eu acho muito limitado. Por isso desenvolvi um com um pouco de mais opções.
+Trabalhamos com múltiplos de 25px. Ou seja, 1 é igual a 25px, 2 é 50px e assim sucessivamente.
+
+Cada letra representa uma orientação:
+ - x = horizontal
+ - y = vertical
+ - l = esquerda
+ - r = direita
+ - t = topo
+ - b = fundo
+
+Vamos ao exemplo:
+
+```html
+<div class="margin-lg-x3"> 
+    <!-- no breakpoint lg, vai colocar margin-left e margim-right como 75px -->
+</div>
+<div class="padding-md-t1"> 
+    <!-- no breakpoint md, vai colocar padding-top como 25px -->
+</div>
+```
+
+
 ## Informações de DEV
 
 ### Compilar
