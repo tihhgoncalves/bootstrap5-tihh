@@ -1,5 +1,5 @@
 # bootstrap5-tihh
-Funcionalidades adicionais do Bootstrap 5 que já considero muito bom.
+Acho o Bootstrap 5 muito bom. Gosto de utilizá-lo em meus projetos. Mas existem algumas particularidades que eu acho que poderiam ser melhor (pelo menos pra forma que eu gosto de trabalhar). Esse projeto, então, é um complemento pra ser usado junto com o Bootstrap 5.
 
 ## Como usar
 Adicione esse script logo após o do Bootstrap 5 no seu projeto.
