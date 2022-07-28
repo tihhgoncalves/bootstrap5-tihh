@@ -4,7 +4,7 @@ Acho o Bootstrap 5 muito bom. Gosto de utilizá-lo em meus projetos. Mas existem
 ## Como usar
 Adicione esse script logo após o do Bootstrap 5 no seu projeto.
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh//tihhgoncalves/bootstrap5-tihh@v1.0.0/dist/bootstrap5-tihh.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh//tihhgoncalves/bootstrap5-tihh@v1.0.1/dist/bootstrap5-tihh.css">
 ```
 ---
 
